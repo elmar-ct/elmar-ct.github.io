@@ -13,20 +13,6 @@
     body {
             font-size: 23px;
 }
-
-#background {
-    background-image:url('Ham/breather4.svg');
-    background-repeat: no-repeat;
-    background-size: 1000px 600px;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0cm;
-    z-index: -1;
-    filter: blur(14px);
-}
        p {
             font-size: 25px;
         }
@@ -37,6 +23,7 @@
          list-style-type: none;
          margin:0;
          padding:0;
+		   columns:2;
          width:200px;
          background-color:#f1f1f1;
       }
@@ -81,6 +68,54 @@
   }
 }
 
+
+
+      
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url('Ham/breather4.svg');
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+      
+
+
+
+      
+
       
 </style>
 
@@ -104,16 +139,12 @@
    
 <body>
       
-<div id="background"> </div>
+<div class="bg-image"> </div>
 
   <h2 style="text-align:center;" > <font color="green">  Siansin'ny Tantsaha </font> </h2><br>
 
-      <!--
-   <p style="text-align:center;"> <img src="Ham/breather14.svg" alt="No Breathers is the first theorem in Entropy formula for Ricci flow
-                                     and its geometric application by Grisha Perelman" 
-      width="1100"
-      height="200" /> <br>
-   </p> -->
+
+   <div class="bg-text">
 
    <ul>
    <li><a href="tongasoa.html"> Tongasoa </a> </li>
@@ -123,6 +154,8 @@
     <li> <a href = "maths/maths.html"> Topology </a></li>
    <li> <a href="pic/gallery.html"> Gallery </a> </li>
    </ul>
+
+   </div>
 
    </body>
 
