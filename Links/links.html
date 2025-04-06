@@ -18,28 +18,27 @@
 	    }
 
 
-	li {
-      opacity: 0;
-      transform: translateY(10px);
-      transition: all 0.4s ease;
-      background: white;
-      margin: 6px 0;
-      padding: 10px 16px;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
+	ul {
+      list-style: none;
+      padding-left: 20px;
     }
 
-    li.visible {
-      opacity: 1;
-      transform: translateY(0);
+    li {
+      margin: 6px 0;
+      background: #fff;
+      padding: 10px 16px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      position: relative;
+      cursor: pointer;
     }
 
     li.has-subitems::after {
       content: "▼";
-      float: right;
+      position: absolute;
+      right: 10px;
+      top: 12px;
       font-size: 0.8em;
-      margin-left: 10px;
     }
 
     li.collapsed::after {
@@ -266,52 +265,38 @@
 	  </ul>  
 
 	  <script>
-    function enumerateList(list, prefix = '', delayStart = 0) {
-      const items = list.children;
-      let count = 1;
-      let delay = delayStart;
+    function enumerateList(list, prefix = '') {
+      const items = Array.from(list.children).filter(el => el.tagName === 'LI');
+      items.forEach((item, index) => {
+        const number = prefix ? `${prefix}.${index + 1}` : `${index + 1}`;
 
-      for (let item of items) {
-        if (item.tagName !== 'LI') continue;
+        // Prefix text
+        const textNode = item.firstChild;
+        if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+          textNode.textContent = `${number}. ${textNode.textContent.trim()}`;
+        }
 
-        const number = prefix ? `${prefix}.${count}` : `${count}`;
-        const originalText = item.firstChild.textContent.trim();
-        item.firstChild.textContent = `${number}. ${originalText}`;
-
-        setTimeout(() => {
-          item.classList.add('visible');
-        }, delay);
-
-        delay += 200;
-
-        // Handle sublists
         const sublist = item.querySelector('ul');
         if (sublist) {
           item.classList.add('has-subitems', 'collapsed');
-
-          // Hide subitems by default
           sublist.classList.remove('visible');
 
-          item.addEventListener('click', (e) => {
-            // Prevent bubbling
+          // Toggle visibility on click
+          item.addEventListener('click', function(e) {
             if (e.target === item) {
               const isVisible = sublist.classList.toggle('visible');
               item.classList.toggle('collapsed', !isVisible);
             }
           });
 
-          delay = enumerateList(sublist, number, delay);
+          // Recursive enumeration
+          enumerateList(sublist, number);
         }
-
-        count++;
-      }
-      return delay;
+      });
     }
 
-    // Start the animation and enumeration
     enumerateList(document.getElementById('main-list'));
   </script>
-
 	  
   </body>
 	<hr> 
