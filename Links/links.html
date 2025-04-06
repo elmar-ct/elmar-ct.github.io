@@ -17,6 +17,47 @@
 		    columns:3;
 	    }
 
+
+	li {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.4s ease;
+      background: white;
+      margin: 6px 0;
+      padding: 10px 16px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    li.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    li.has-subitems::after {
+      content: "▼";
+      float: right;
+      font-size: 0.8em;
+      margin-left: 10px;
+    }
+
+    li.collapsed::after {
+      content: "►";
+    }
+
+    .sublist {
+      margin-top: 6px;
+      margin-left: 20px;
+      display: none;
+    }
+
+    .sublist.visible {
+      display: block;
+    }
+	    
+
+
 	.navbar {
   width: 100%;
   background-color: none;
@@ -55,8 +96,13 @@
 	  <div class="navbar">
   <a class="active" href="https://elmar-ct.github.io/index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
 </div>
-	<h3> General </h3>
-    <ul> 
+
+
+<ul id="main-list">
+    <li> General
+	    
+      <ul class="sublist"> 
+	      
         <li><a href="https://wikileaks.org/"> Wiki Leaks</a> </li>
         <li><a href="https://tenymalagasy.org/bins/homePage"> Rakibolana malagasy</a> (learn malagasy)</li>
         <li><a href="https://amharicteacher.com/"> Learn Amharic</a> (free online amharic lessons)</li>
@@ -108,6 +154,8 @@
 	    <li> <a href="https://epdf.pub/en/"> epdf.pub</a> </li>
 	    <li> <a href="https://oregondigital.org/"> OregonDigital </a></li>
      </ul> 
+    </li>
+</ul>
 	  <h3> Sciences&Medicine </h3>
 	  <ul>
 		<li> <a href="https://www.unicode.org/charts/#symbols"> Unicode symbols; </a></li>
@@ -209,9 +257,55 @@
 		  <li> <a href="https://wikem.org/wiki/Main_Page"> Emergency Medicine </a></li>
 		  <li> <a href="https://www.wikihow.com/Main-Page"> How-to-wiki </a></li>
 		  <li> <a href="https://www.wiktionary.org/"> Wikitionary </a></li>
-		  
-	  
 	  </ul>
+
+	  <script>
+    function enumerateList(list, prefix = '', delayStart = 0) {
+      const items = list.children;
+      let count = 1;
+      let delay = delayStart;
+
+      for (let item of items) {
+        if (item.tagName !== 'LI') continue;
+
+        const number = prefix ? `${prefix}.${count}` : `${count}`;
+        const originalText = item.firstChild.textContent.trim();
+        item.firstChild.textContent = `${number}. ${originalText}`;
+
+        setTimeout(() => {
+          item.classList.add('visible');
+        }, delay);
+
+        delay += 200;
+
+        // Handle sublists
+        const sublist = item.querySelector('ul');
+        if (sublist) {
+          item.classList.add('has-subitems', 'collapsed');
+
+          // Hide subitems by default
+          sublist.classList.remove('visible');
+
+          item.addEventListener('click', (e) => {
+            // Prevent bubbling
+            if (e.target === item) {
+              const isVisible = sublist.classList.toggle('visible');
+              item.classList.toggle('collapsed', !isVisible);
+            }
+          });
+
+          delay = enumerateList(sublist, number, delay);
+        }
+
+        count++;
+      }
+      return delay;
+    }
+
+    // Start the animation and enumeration
+    enumerateList(document.getElementById('main-list'));
+  </script>
+
 	  
   </body>
 	<hr> 
