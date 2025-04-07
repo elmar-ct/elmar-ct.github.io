@@ -14,48 +14,31 @@
 		    text-align:center;
 	    }
 	    ul{
-		list-style: none;
-      		padding-left: 20px;
 		    columns:2;
 	    }
 
+ .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
-	ul {
-      list-style: none;
-      padding-left: 20px;
-    }
+.active, .collapsible:hover {
+  background-color: #555;
+}
 
-    li {
-      margin: 6px 0;
-      background: #fff;
-      padding: 10px 16px;
-      border-radius: 6px;
-      box-shadow: 0 1px 3px rgba(0, 128, 0, 0.1);
-      position: relative;
-      cursor: pointer;
-    }
-
-    li.has-subitems::after {
-      content: "▼";
-      position: absolute;
-      right: 10px;
-      top: 12px;
-      font-size: 0.8em;
-    }
-
-    li.collapsed::after {
-      content: "►";
-    }
-
-    .sublist {
-      margin-top: 6px;
-      margin-left: 20px;
-      display: none;
-    }
-
-    .sublist.visible {
-      display: block;
-    }
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
 	    
 
 
@@ -99,11 +82,14 @@
 </div>
 
 
-<ul id="main-list">
-    <li> General
+
+    <h2> Useful Links </h2>
 	    
-      <ul class="sublist"> 
-	      
+<button type="button" class="collapsible">General</button> 
+
+ <div class="content">
+
+	 <ul>
         <li><a href="https://wikileaks.org/"> Wiki Leaks</a> </li>
         <li><a href="https://tenymalagasy.org/bins/homePage"> Rakibolana malagasy</a> (learn malagasy)</li>
         <li><a href="https://amharicteacher.com/"> Learn Amharic</a> (free online amharic lessons)</li>
@@ -155,10 +141,13 @@
 	    <li> <a href="https://epdf.pub/en/"> epdf.pub</a> </li>
 	    <li> <a href="https://oregondigital.org/"> OregonDigital </a></li>
      </ul> 
-    </li>
+ </div>
 
-	  <li> Sciences and Medicine
-		  <ul class="sublist">
+
+	  <button type="button" class="collapsible">  Sciences and Medicine  </button> 
+	  
+		<div class="content">
+	  <ul>
 			  
 		<li> <a href="https://www.unicode.org/charts/#symbols"> Unicode symbols; </a></li>
        		 <li> <a href="https://xy-pic.sourceforge.net/"> Typesetting (commutative) diagrams in category.</a> </li> 
@@ -206,10 +195,12 @@
 		  <li> <a href="https://open.bu.edu/home"> openBU </a> </li>
 		  <li> <a href="https://www.matematicasvisuales.com/"> MathematicasVisuales </a></li>  	  
 	  </ul> 
-	  </li>
+	</div>
+	  
+	  <button type="button" class="collapsible">Political Economy and History </button>
 
-	  <li> Political Economy and History
-	  <ul class="sublist">
+	  <div class="content">
+	  	  <ul>
 		  <li> <a href="http://www.royalark.net/Madagascar/imerina.htm"> H.Dynasty </a></li>
 		  <li> <a href="https://www.sahistory.org.za"> ZA History</a>[History of South Africa]; </li>
 		  <li>  <a href="https://www.sahistory.org.za/article/group-areas-act-1950"> Group Area Act  </a>; </li>
@@ -224,22 +215,26 @@
 		  <li> <a href="https://chineseposters.net/"> Chineseposters</a> </li>
 		  <li> <a href="https://books.google.com/books?id=J5MoAAAAYAAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false">  Madagascar:1903  </a> </li>
 	  </ul>
-	  </li>
+
+	  </div>
 		  
-	  <li> Multimedia 
-	  <ul class="sublist">
+	  <button type="button" class="collapsible">Multimedia </button>
+	  <div class="content">
+	  <ul>
 		  <li> <a href="http://rutube.ru/"> Rutube  </a> </li>
 		  <li> <a href="https://www.yfsp.tv/"> yfsp </a> </li>
 		  <li> <a href="https://webtv.aes.ml/"> webtv.aes</a> </li>
 		  <li> <a href="https://ethiozeima.com/"> Ethiozeima </a> </li>
 		  <li> <a href="https://ethiocinema.com/"> Ethiocinema </a></li>
 		  <li> <a href="https://musiclab.chromeexperiments.com/Shared-Piano/#TMc-sSAZR">piano </a>;
-			  <a href="https://musiclab.chromeexperiments.com/Experiments"> MusicLab</a>; <a href="https://www.musicca.com/"> Musicca </a></li>
+		<a href="https://musiclab.chromeexperiments.com/Experiments"> MusicLab</a>; <a href="https://www.musicca.com/"> Musicca </a></li>
 	  </ul>
-	  </li>
+	  </div>
+	  
+	  <button type="button" class="collapsible">  Communities </button>
 
-	  <li> Communities
-	  <ul class="sublist">
+	  <div class="content">
+	  <ul>
 		  <li> <a href="https://www.ecured.cu/EcuRed:Enciclopedia_cubana"> Ecured  </a>(encyclopedia) </li>
 		  <li> <a href="https://encyclopediaofmath.org/wiki/Main_Page">Encyclopedia of Mathematics   </a> </li>
 		  <li> <a href="https://fallout.fandom.com/wiki/Fallout_Wiki"> fandom </a> </li>
@@ -263,42 +258,25 @@
 		  <li> <a href="https://www.wikihow.com/Main-Page"> How-to-wiki </a></li>
 		  <li> <a href="https://www.wiktionary.org/"> Wikitionary </a></li>
 	  </ul>
-	  </li>
-	  </ul>  
+	  </div>  
 
 	  <script>
-    function enumerateList(list, prefix = '') {
-      const items = Array.from(list.children).filter(el => el.tagName === 'LI');
-      items.forEach((item, index) => {
-        const number = prefix ? `${prefix}.${index + 1}` : `${index + 1}`;
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
-        // Prefix text
-        const textNode = item.firstChild;
-        if (textNode && textNode.nodeType === Node.TEXT_NODE) {
-          textNode.textContent = `${number}. ${textNode.textContent.trim()}`;
-        }
-
-        const sublist = item.querySelector('ul');
-        if (sublist) {
-          item.classList.add('has-subitems', 'collapsed');
-          sublist.classList.remove('visible');
-
-          // Toggle visibility on click
-          item.addEventListener('click', function(e) {
-            if (e.target === item) {
-              const isVisible = sublist.classList.toggle('visible');
-              item.classList.toggle('collapsed', !isVisible);
-            }
-          });
-
-          // Recursive enumeration
-          enumerateList(sublist, number);
-        }
-      });
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
     }
+  });
+}
+</script>
 
-    enumerateList(document.getElementById('main-list'));
-  </script>
 	  
   </body>
 	<hr> 
