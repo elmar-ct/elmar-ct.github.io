@@ -126,14 +126,23 @@ not containing the other while in the case of \(T_0\), only one of them is requi
 
 	<p> If the axioms \(T_1\) and \(T_3\) are simultaneously fulfilled then the space \(X\) is said to be <b> regular space. </b> </p>
 
-	<h3> \(T_4\) or Normal Spaces </h3>
+	<h3> \(T_4\) and Normal Spaces </h3>
 
 	<div id="greenDIV"> <b> Any two disjoint closed sets of \(X\) possess disjoint neighborhoods including them. </b> </div>
 
 	<p> In other words, for any closed subsets \(C_1\) and \(C_2\), \(C_\cap C_2 = \emptyset\), there exist neighborhoods \(U(C_1)\) and \(U(C_2)\) such that 
 		\(C_1 \subset U(C_1)\), \(C_2 \subset U(C_2)\) and \(U(C_1) \cap U(C_2) = \emptyset\).
 	</p>
-	<p> A topological space for which both the \(T_1\) and the \(T_4\) axioms are satisfied is said to be <b> normal space</b>. </p>
+	<p> A topological space for which both the \(T_1\) and the \(T_4\) axioms are satisfied is said to be <b> normal space</b>. </p><hr>
+
+	<p> We prove now that that the two formulations for \( T_3 \)axiom are in fact equivalent. Assume the old, that is, the first version. Let \(x \in X\) be given and let
+	\(U(y)\) be its neigborhood. The set \(X_x := X\setminus U(x) \) is closed, at the same time it excludes the point \(x\). There is therefore another neighborhood, denoted by \( O_x \) 
+	such that \(C_x \subseteq O_x \) and \( U(x) \cap O_x  = \emptyset. \)  Set \(V(x) := X\setminus O_x \). The set \(V(x)\) is obviously an open set containing \(x\). Moreover
+
+		$$ \overline{V(x)} = \overline{X\setminus O_x} = X\setminus \operatorname{Int}(O_x) = X\setminus O_x \subset X\setminus C_x = U(x).  $$
+	
+	</p>
+
 
 	
 
