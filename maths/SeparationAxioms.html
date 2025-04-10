@@ -87,8 +87,9 @@
 </div>
 
 <h2> Separation Axioms </h2>
-	<p> As Rhoklin stated it well in Beginner's Course in Topology, there are more than \(10\) Separation Axioms or Trennungsaxiom. Here we are focusing on the 
-  essential ones. In all that follow, \(X\) is a topological space whose topology will be specified contextwisely. </p>
+	<p> As Rokhlin stated it well in <em>Beginner's Course in Topology</em>, there are more than \(10\) Separation Axioms or Trennungsaxiom. Here we are focusing on the 
+  essential ones. In addition, modern treatment of separation axioms in the framework of category can be found <a href="https://ncatlab.org/nlab/show/separation+axioms"> here </a>.
+		In all that follow, \(X\) is a topological space whose topology will be specified contextwisely. </p>
 	
 	<h3> \(T_0\): Kolmogorov </h3>
 <div id="myDIV">
@@ -136,10 +137,10 @@ not containing the other while in the case of \(T_0\), only one of them is requi
 	<p> A topological space for which both the \(T_1\) and the \(T_4\) axioms are satisfied is said to be <b> normal space</b>. </p><br>
 
 	<p> We now prove that that the two formulations for \( T_3 \)axiom are in fact equivalent. Assume the old, that is, the first version. Let \(x \in X\) be given and let
-	\(U(y)\) be its neigborhood. The set \(X_x := X\setminus U(x) \) is closed, at the same time it excludes the point \(x\). There is therefore another neighborhood, denoted by \( O_x \) 
-	such that \(C_x \subseteq O_x \) and \( U(x) \cap O_x  = \emptyset. \)  Set \(V(x) := X\setminus O_x \). The set \(V(x)\) is obviously an open set containing \(x\). Moreover
+	\(U(x)\) be its neigborhood. The set \(C_x := X\setminus U(x) \) is closed, at the same time it excludes the point \(x\). There is therefore another neighborhood of \(x\), denoted by \( O_x \) 
+	such that \(C_x \subseteq O_x \) and \( U(x) \cap O_x  = \emptyset. \)  Set \(V(x) := X\setminus \overline{O}_x \). The set \(V(x)\) is obviously an open set containing \(x\). Moreover
 
-		$$ \overline{V(x)} = \overline{X\setminus O_x} = X\setminus \operatorname{Int}(O_x) = X\setminus O_x \subseteq X\setminus C_x = U(x).  $$
+		$$ \overline{V(x)} = \overline{X\setminus \overline{O}_x} = X\setminus \operatorname{Int}\left(\overline{O}_x\right) = X\setminus O_x \subset X\setminus C_x = U(x)    $$
 
 	</p>
 
