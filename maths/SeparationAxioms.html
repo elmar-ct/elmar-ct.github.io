@@ -138,7 +138,8 @@ not containing the other while in the case of \(T_0\), only one of them is requi
 
 	<p> We now prove that that the two formulations for \( T_3 \)axiom are in fact equivalent. Assume the old, that is, the first version. Let \(x \in X\) be given and let
 	\(U(x)\) be its neigborhood. The set \(C_x := X\setminus U(x) \) is closed, at the same time it excludes the point \(x\). There is therefore another neighborhood of \(x\), denoted by \( O_x \) 
-	such that \(C_x \subseteq O_x \) and \( U(x) \cap O_x  = \emptyset. \)  Set \(V(x) := X\setminus \overline{O}_x \). The set \(V(x)\) is obviously an open set containing \(x\). Moreover
+	such that \(C_x \subseteq O_x \) and \( U(x) \cap O_x  = \emptyset. \)  Set \(V(x) := X\setminus \overline{O}_x \). The set \(V(x)\) is obviously an open set containing \(x\)(To see why it contains \(x\), notice that if \(x\in \overline{O}_x\)
+		then \(x \in \overline{U(x)} \cap \overline{O_x} \), but since \(U(x) \cap O_x = \emptyset\) this must imply that \(x\in \partial U(x)\) which is absurd.) Moreover
 
 		$$ \overline{V(x)} = \overline{X\setminus \overline{O}_x} = X\setminus \operatorname{Int}\left(\overline{O}_x\right) = X\setminus O_x \subset X\setminus C_x = U(x)    $$
 
