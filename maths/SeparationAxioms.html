@@ -164,12 +164,21 @@ not containing the other while in the case of \(T_0\), only one of them is requi
 		<li> The real straight line \(\mathbb{R}^1 \) equipped with topology having its base formed by the rays of the form \(\left(a, +\infty \right)\,, a\in \mathbb{R}\).
 		We prove that \(\mathbb{R}^1\) is \(T_0\) but not \(T_1\) space. Given a point \(x\neq y\) in \( \mathbb{R}^1\), wlog we can always assume by linear order in \(\mathbb{R}^1\) that \(x \leq y\). 
 			The set \( U(y):= \left( \dfrac{y+x}{2}, +\infty \right) \) includes the point \(y\) and excludes the point \(x\).
-		Therefore \(\mathbb{R}^1\) is \(T_0\). However, it happens it's not \(T_1\). Assume under the same settings that \(V\) is a neiighborhood of \(x\). There exist some \(\left(\xi, +\infty
-			\right)\,, \xi\in \mathbb{R} \) such that \(x\) in \( \left(\xi, +\infty\right)\). But since \(y \geq x\), \(y\) must be in \(\left(\xi, +\infty\right)\). In other words.
+		Therefore \(\mathbb{R}^1\) is \(T_0\). However, it happens it's not \(T_1\). Assume under the same settings that \(V\) is a neiighborhood of \(x\). There exists \(\left(\xi, +\infty
+			\right)\,,\text{for some}\, \xi\in \mathbb{R} \) such that \(x\) in \( \left(\xi, +\infty\right)\). But since \(y \geq x\), \(y\) must be in \(\left(\xi, +\infty\right)\). In other words.
 		any neighbor of \(x\) contains \(y\). Hence \(x\) and  \(y\) cannot be separated in the sense of axiom \(T_1\). Hence \(\mathbb{R}^1\)  is not a \(T_1\) space.</li>
 
 		<li> The second example concerns the line segment \(\left[0, 1\right]\) equipped with the topology whose open sets are the empty set and all sets otained from \( \left[0, 1\right] \) 
-		by discarding either a finite or countable number of points. We prove that this space is \(T_1\) but not \(T_2\) or Hausdorff. Let \((x, y) \in \left[0, 1\right]^2\)... </li>
+		by discarding either a finite or countable number of points. We prove that this space is \(T_1\) but not \(T_2\) or Hausdorff. Let \((x, y) \in \left[0, 1\right]^2\) such that \(x\neq y\). We have \(x\in \left[0, 1\right]\setminus \{1\}=: U(x) \) and \(y \in \left[0, 1\right] \setminus \{x\} =:U(y)\). Hence, \(X\) is \(T_1\) space.
+		It's not \(T_2\) however since if \(U\) and \(V\) are neighborhoods to respectively \(x\) and \(y\), then \(U = \left[0, 1\right]\setminus D_x \) and \(V = \left[0, 1\right]\setminus D_y\) with \(D_X\)
+		and \(D_y\) are subsets of \(\left[0, 1\right]\) of at most countable cardinality. Hence 
+		
+		$$U\cap V = \left(\left[0, 1\right] \cap D_x^{c} \right) \cap \left(\left[0, 1\right] \cap D_y^{c} \right) = \left(\left[0, 1\right] \cap \left( D_x^{c}\cap   D_x^{c} \right)\right) = \left[0, 1\right]\setminus \left(D_x \cup D_y\right).  $$ 
+
+			Since \(D_X\cup D_y\) remains at most countable, it follows that \(\left[0, 1\right]\setminus \left(D_x \cup D_y\right) \neq \emptyset. \) Therfore, any neighbor of \(x\) meets any neighbor of \(y\) thereby discarding any 
+			possibility for \(\left[0, 1\right]\) to be Hausdorff.
+		
+		</li>
 	</ol>
 
 
