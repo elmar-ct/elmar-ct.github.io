@@ -1,13 +1,67 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>My Web Page</title>
-    <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head>
 <body>
-    <h1>Welcome to my page!</h1>
-    <p>This is an Index.htlm file </p>
+
+<div class="sidenav">
+  <a href="#about">Tongaosoa</a>
+  <a href="#talks">Informal Talks</a>
+  <a href="#quotations">Some Quotations</a>
+  <a href="#links">Topology</a>
+ <a href="#maths">Useful Links </a>
+    <a href= ""> Galleryz </a>
+
+</div>
+
+<div class="main">
+  <h2>Siansin'ny Tantsaha</h2>
+    <p> This is a test text written to mean anything but to fill out space. This website is under reparation after it has shut down due to my unprecautious attitude.</p>
+    <p> I suddenly change the privacy that is why is has fail...</p>
+    <p> It's worth mentionning that this moment is the time to rebuild the site accurately!</p>
+
+</div>
 </body>
 </html>
+
