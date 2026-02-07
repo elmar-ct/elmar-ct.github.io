@@ -60,4 +60,29 @@ body {
 .subnav:hover .subnav-content {
   display: block;
 }
+
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:relative;
+}
+
+.main-headline{
+  flex:1;
+  text-align:center;
+  order:2;
+  margin:0;
+}
+
+/*When items collapse */
+@media (max-width:768){
+  .left-nav, .right-nav{
+    display:none;
+  }
+  .main-headline{
+    flex:none;
+  }
+}
+
 </style>
