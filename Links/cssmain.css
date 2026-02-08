@@ -157,6 +157,7 @@ footer {
   padding: 16px;
   text-align: center;
   color: white;
+  border-top: 4px solid #000000 ;
 }
 
     /* Responsive */
