@@ -62,17 +62,14 @@ body {
 }
 
 .site-header{
-  display:flex;
-  justify-content:space-between;
+ display-header:grid;
+  grid-template-columns:1fr auto 1fr;
   align-items:center;
-  position:relative;
 }
 
 .main-headline{
-  flex:1;
+  grid-column:2;
   text-align:center;
-  order:2;
-  margin:0;
 }
 
 /*When items collapse */
