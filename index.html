@@ -26,13 +26,115 @@
 	"react-dnd-html5-backend":"/o/frontend-js-react-web/__liferay__/exports/react-dnd-html5-backend.js","classnames":"/o/frontend-js-react-web/__liferay__/exports/classnames.js"},"scopes":{}}
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="Links/principal.css">
 
+
+<!--	
+<link rel="stylesheet" href="Links/principal.css"> -->
+<lin rel="stylesheet" href="Links/cssmain.css">
 <title>ሲአንስን ታንፃኅ</title>
 
   <header> እውነትን ከእውነታዎች ፈልጉ </header>
 </head>
+
+<body>
+<header class="header">
+    <h1>ሲአንስን ታንፃኅ</h1>
+</header>
+
+	
+<nav class="nav-container">
+	<div class="nav">
+		<ul class="nav-list">
+			<li class="nav-item">
+				<a href="#" class="nav-link"> Home <i class="fa fa-caret-down"> </i> </a>
+				<div class="dropdown"> 
+					<a href="tongasoa.html" class="dropdown-item"> ቶንጋስዋ </a>
+					<a href="#" class="dropdown-tem"> Contact </a>
+				</div>
+			</li>
+			<li class="nav-item"><a href="#" class="nav-link">Navigation &amp Resources  <i class="fa fa-caret-down"></i></a>
+				<div class="dropdown">
+					<a href="Links/usefullinks.html" class="dropdown-item"> Useful links</a>
+					<a href="#link2" class="dropdown-item"> Tech resources </a>
+				</div>
+			</li>
+			<li class="nav-item"><a href="#" class="nav-link">Mathematics  <i class="fa fa-caret-down"></i></a>
+				<div class="dropdown">
+					<a href="#link3" class="dropdown-item"> Topology &amp Geomtry </a>
+					<a href="#link4" class="dropdown-item"> Ponder On It </a>
+					<a href="#link5" class=dropdown-item> Random Stuffs </a> 
+				</div>
+			</li>
+
+			
+			<li class="nav-item"><a href="#" class="nav-link">Others <i class="fa fa-caret-down"></i></a>
+				<div class="dropdown">
+					<a href="#link3" class="dropdown-item"> Africa In the World </a>
+					<a href="#link4" class="dropdown-item"> Teach </a> 
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+</nav>
+
+	<div class="main-content">
+		<div class="hero">
+			<div class="hero-content">
+				<h2>ሲአንስን  ታንፃኅ</h2>
+			</div>
+		</div>
+		<div style="padding: 40px; max-width: 900px; margin: 0 auto;">
+      <h2>Contact and other informations</h2>
+      <p>
+        Lorem ipsum etc.
+      </p>
+    </div>
+  </div>
+
+<!--div--> 
+	<script>
+    // Mobile dropdown toggle
+    document.querySelectorAll('.nav-item').forEach(item => {
+      const link = item.querySelector('.nav-link');
+      if (link && link.querySelector('.fa-caret-down')) {
+        link.addEventListener('click', (e) => {
+          if (window.innerWidth <= 700) {
+            e.preventDefault();
+            item.classList.toggle('open');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 	<!-- The body starts here -->
+
+
+<!--	
 <body>
  <hr>
 	<div class="header">
@@ -65,8 +167,8 @@
 				</div>
 			</div>
 		</div>
-		</div>
-<!--Stop the header-->
+		</div> 
+
 
 		<div style="padding-left:16px"> <h2 class="main-headline"> Science as human collective undertaking </h2> 
 
@@ -79,7 +181,7 @@
     This changes its content as well as its form.”</p> <p style="font-family: 'Times New Roman', Times, serif;font-size:14px;"> (Critique of Hegel's doctrine of the state, K. Marx) </p>
 
 			</div>
-	<!-- footer begins here -->
+	
 <hr>
 
 		<div class="footer">
@@ -87,6 +189,6 @@
 		</div>
 	
 
-</body>
-</html>
+</body> -->
+
 
