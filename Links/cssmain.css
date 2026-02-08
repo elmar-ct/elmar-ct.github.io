@@ -134,7 +134,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.12), rgba(0,0,0,0.40));
+      background-image: url("Ham/illustrations/back_foto.JPG")  ;
     }
 
     .hero-content {
