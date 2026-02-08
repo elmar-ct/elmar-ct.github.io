@@ -151,6 +151,14 @@
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
 
+    /* Style the footer */
+footer {
+  background-color: E6E6E6;
+  padding: 16px;
+  text-align: center;
+  color: white;
+}
+
     /* Responsive */
     @media (max-width: 1200px) {
       .main-content {
