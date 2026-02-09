@@ -1,0 +1,64 @@
+<style>
+
+#myDIV {
+  height:200px; 
+  padding: 25px;
+  background-attachment: fixed;
+  background-position: center; 
+  background-image: url("Ham/flag2.svg");
+background-size:25%;
+background-repeat: repeat-x;
+	background-position:50%10%;
+	
+}  
+    body {
+            font-size: 20px;
+		background:rgba(210, 205, 190, 0.15);
+        }
+
+        p {
+            font-size: 20px;
+        }
+	  footer{
+		  font-size:15px;
+	  }
+	  header{
+		  font-size:15px;
+		  color:rgb(252, 125, 61);
+		  text-align:center;
+	  }
+
+	  .navbar {
+  width: 100%;
+  background-color: none;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+	img {
+  border-radius: 50%;
+}
+
+	  
+</style>
